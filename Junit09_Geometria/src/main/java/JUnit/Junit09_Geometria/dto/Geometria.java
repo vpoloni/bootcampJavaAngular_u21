@@ -5,11 +5,12 @@ public class Geometria {
 	//Atributos de clase
 	private int id;
 	private String nom;
+	private double area;
 	
 	//Constructores
-	public Geometria(int id, String nom) {
+	public Geometria(int id) {
 		this.id = id;
-		this.nom = nom;
+		this.nom = figura(id);
 	}
 	
 	public Geometria() {
@@ -19,13 +20,13 @@ public class Geometria {
 
 	//Métodos propios de clase Geometria
 	//metodo area del cuadrado
-	public static int areacuadrado(int n1){
+	public int areacuadrado(int n1){
 		return n1*n1;
 		}
 	
 	//metodo area del circulo
-	public static double areaCirculo(int r){
-		double PI=3.1416; 
+	public double areaCirculo(int r){
+		final double PI=3.1416; 
 		return  PI * Math.pow(r,2);
 		}
 	
@@ -60,46 +61,35 @@ public class Geometria {
 		}
 	
 	//Selector de figuras
-	public void figura(int fiCode) {
+	public String figura(int fiCode) {
 		
 		String Figura="";
-		double areaFig=0.0;
 		
 		switch (fiCode) 
 		{
 		case 1: Figura= "cuadrado";
-				areaFig=areacuadrado(4);
 			break;
 		case 2: Figura= "Circulo";
-				areaFig=areaCirculo(2);
 			break;
 		case 3: Figura= "Triangulo";
-				areaFig=areatriangulo(2,5);
 			break;
 		case 4: Figura= "Rectangulo";
-				areaFig=arearectangulo(2,5);
 			break;
 		case 5: Figura= "Pentagono";
-				areaFig=areapentagono(2,5);
 			break;
 		case 6: Figura= "Rombo";
-				areaFig=arearombo(2,5);
 			break;
 		case 7: Figura= "Romboide";
-				areaFig=arearomboide(2,3);
 			break;
 		case 8: Figura= "Trapecio";
-				areaFig=areatrapecio(2,2,3);
 			break;
 		default:
 			Figura= "Default";
-			areaFig=10.00;
 			break;
 		}
-		System.out.println("La figura seleccionada es: "+ Figura);
-		System.out.printf("Su area es: %.2f", areaFig);
+		return Figura;
+		
 	}
-
 	
 	//Getters y Setters
 	/**
@@ -130,10 +120,24 @@ public class Geometria {
 		this.nom = nom;
 	}
 
-	//toString
+	
+	/**
+	 * @return the area
+	 */
+	public double getArea() {
+		return area;
+	}
+
+	/**
+	 * @param area the area to set
+	 */
+	public void setArea(double area) {
+		this.area = area;
+	}
+
 	@Override
 	public String toString() {
-		return "Geometria [id=" + id + ", nom=" + nom + "]";
+		return "Geometria [id=" + id + ", nom=" + nom + ", area=" + area + "]";
 	}
 	
 	
