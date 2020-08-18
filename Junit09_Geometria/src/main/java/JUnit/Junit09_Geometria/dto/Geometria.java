@@ -31,7 +31,7 @@ public class Geometria {
 		}
 	
 	//metodo area del triangulo
-	static int areatriangulo(int a, int b){
+	public int areatriangulo(int a, int b){
 		return (a*b)/2;
 		}
 	
