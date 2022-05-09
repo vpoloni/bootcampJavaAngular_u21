@@ -1,97 +1,104 @@
 package JUnit.Junit09_Geometria.dto;
 
 public class Geometria {
-	
-	//Atributos de clase
+
+	// Atributos de clase
 	private int id;
 	private String nom;
 	private double area;
-	
-	//Constructores
+
+	// Constructores
 	public Geometria(int id) {
 		this.id = id;
 		this.nom = figura(id);
 	}
-	
+
 	public Geometria() {
 		this.id = 9;
 		this.nom = "Default";
 	}
 
-	//Métodos propios de clase Geometria
-	//metodo area del cuadrado
-	public int areacuadrado(int n1){
-		return n1*n1;
-		}
-	
-	//metodo area del circulo
-	public double areaCirculo(int r){
-		final double PI=3.1416; 
-		return  PI * Math.pow(r,2);
-		}
-	
-	//metodo area del triangulo
-	public int areatriangulo(int a, int b){
-		return (a*b)/2;
-		}
-	
-	//metodo area del rectangulo
-	public int arearectangulo(int b , int h){
-		return b*h;
-		}
-	
-	//metodo area del rectangulo
-	public int areapentagono(int p, int a){
-		return (p*a) / 2;
-		}
-	
-	//metodo area del rectangulo
-	public int arearombo(int D,int d){
-		return (D*d)/2 ;
-		}
-	
-	//metodo area del rectangulo
-	public int arearomboide(int b,int h){
-		return b*h ;
-		}
-	
-	//metodo area del rectangulo
-	public int areatrapecio (int B , int b , int h){ 
-		return ((B+b)/2)*h;
-		}
-	
-	//Selector de figuras
-	public String figura(int fiCode) {
-		
-		String Figura="";
-		
-		switch (fiCode) 
-		{
-		case 1: Figura= "cuadrado";
+	// Métodos propios de clase Geometria
+	// metodo area del cuadrado
+	public static int areacuadrado(int n1) {
+		return n1 * n1;
+	}
+
+	// metodo area del circulo
+	public static double areaCirculo(int r) {
+		final double PI = 3.1416;
+		return PI * Math.pow(r, 2);
+	}
+
+	// metodo area del triangulo
+	public static int areatriangulo(int a, int b) {
+		return (a * b) / 2;
+	}
+
+	// metodo area del rectangulo
+	public static int arearectangulo(int b, int h) {
+		return b * h;
+	}
+
+	// metodo area del rectangulo
+	public static int areapentagono(int p, int a) {
+		return (p * a) / 2;
+	}
+
+	// metodo area del rectangulo
+	public static int arearombo(int D, int d) {
+		return (D * d) / 2;
+	}
+
+	// metodo area del rectangulo
+	public static int arearomboide(int b, int h) {
+		return b * h;
+	}
+
+	// metodo area del rectangulo
+	public static int areatrapecio(int B, int b, int h) {
+		return ((B + b) / 2) * h;
+	}
+
+	// Selector de figuras
+	public static String figura(int fiCode) {
+
+		String Figura = "";
+
+		switch (fiCode) {
+		case 1:
+			Figura = "cuadrado";
 			break;
-		case 2: Figura= "Circulo";
+		case 2:
+			Figura = "Circulo";
 			break;
-		case 3: Figura= "Triangulo";
+		case 3:
+			Figura = "Triangulo";
 			break;
-		case 4: Figura= "Rectangulo";
+		case 4:
+			Figura = "Rectangulo";
 			break;
-		case 5: Figura= "Pentagono";
+		case 5:
+			Figura = "Pentagono";
 			break;
-		case 6: Figura= "Rombo";
+		case 6:
+			Figura = "Rombo";
 			break;
-		case 7: Figura= "Romboide";
+		case 7:
+			Figura = "Romboide";
 			break;
-		case 8: Figura= "Trapecio";
+		case 8:
+			Figura = "Trapecio";
 			break;
 		default:
-			Figura= "Default";
+			Figura = "Default";
 			break;
 		}
 		return Figura;
-		
+
 	}
-	
-	//Getters y Setters
+
+	// Getters y Setters
 	/**
 	 * @return the id
 	 */
@@ -120,7 +127,6 @@ public class Geometria {
 		this.nom = nom;
 	}
 
-	
 	/**
 	 * @return the area
 	 */
@@ -139,8 +145,5 @@ public class Geometria {
 	public String toString() {
 		return "Geometria [id=" + id + ", nom=" + nom + ", area=" + area + "]";
 	}
-	
-	
-	
-	
+
 }
